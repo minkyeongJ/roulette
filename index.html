@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>질문 룰렛</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="section-titie">
+        <h1 class="titie"><span>______</span>에 대해 말씀해주시겠어요?</h1>
+      </header>
+      <main>
+        <section class="section-inputquestion">
+          <h1 class="ir">질문 입력란입니다.</h1>
+          <label for="input-question">질문 : </label>
+          <input type="text" id="input-question" />
+          <button id="button-addquestion">등록</button>
+        </section>
+        <section class="section-showquestion">
+          <h1 class="ir">입력된 질문을 확인할 수 있습니다.</h1>
+          <ul id="showquestion-list"></ul>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

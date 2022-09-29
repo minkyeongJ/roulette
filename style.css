@@ -1,0 +1,33 @@
+.ir {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+#app {
+  text-align: center;
+}
+
+.section-titie {
+  margin: 50px 0;
+}
+
+.section-inputquestion label {
+  font-size: 18px;
+}
+.section-inputquestion input {
+  height: 23px;
+  width: 400px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.section-showquestion #showquestion-list {
+  text-align: left;
+  margin: 10px auto;
+  width: 400px;
+}/*# sourceMappingURL=style.css.map */
