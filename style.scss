@@ -15,13 +15,18 @@
   margin: 50px 0;
 }
 
+main {
+  margin: 0 auto;
+  width: 50%;
+}
+
 .section-inputquestion {
   label {
     font-size: 18px;
   }
   input {
     height: 23px;
-    width: 400px;
+    width: 80%;
     font-size: 16px;
     border: none;
     border-bottom: 1px solid gray;
@@ -32,7 +37,7 @@
   #showquestion-list {
     text-align: left;
     margin: 10px auto;
-    width: 400px;
+    width: 80%;
   }
 }
 
@@ -40,10 +45,19 @@
   margin: 50px 0;
 }
 
-.list-chosen{
-  background-color: gray;
+.list-chosen {
+  background-color: lightgray;
 }
 
-.except-choose{
+.except-choose {
   text-decoration: line-through;
+}
+
+.section-howtouse {
+  margin: 20px 0;
+  p {
+    text-align: left;
+    font-size: 12px;
+    color: gray;
+  }
 }

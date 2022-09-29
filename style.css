@@ -15,12 +15,17 @@
   margin: 50px 0;
 }
 
+main {
+  margin: 0 auto;
+  width: 50%;
+}
+
 .section-inputquestion label {
   font-size: 18px;
 }
 .section-inputquestion input {
   height: 23px;
-  width: 400px;
+  width: 80%;
   font-size: 16px;
   border: none;
   border-bottom: 1px solid gray;
@@ -29,7 +34,7 @@
 .section-showquestion #showquestion-list {
   text-align: left;
   margin: 10px auto;
-  width: 400px;
+  width: 80%;
 }
 
 .section-roulette {
@@ -37,9 +42,18 @@
 }
 
 .list-chosen {
-  background-color: gray;
+  background-color: lightgray;
 }
 
 .except-choose {
   text-decoration: line-through;
+}
+
+.section-howtouse {
+  margin: 20px 0;
+}
+.section-howtouse p {
+  text-align: left;
+  font-size: 12px;
+  color: gray;
 }/*# sourceMappingURL=style.css.map */
