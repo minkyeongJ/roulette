@@ -7,19 +7,19 @@
   overflow: hidden;
 }
 
-#app{
+#app {
   text-align: center;
 }
 
-.section-titie{
+.section-titie {
   margin: 50px 0;
 }
 
-.section-inputquestion{
-  label{
+.section-inputquestion {
+  label {
     font-size: 18px;
   }
-  input{
+  input {
     height: 23px;
     width: 400px;
     font-size: 16px;
@@ -28,10 +28,22 @@
   }
 }
 
-.section-showquestion{
-  #showquestion-list{
+.section-showquestion {
+  #showquestion-list {
     text-align: left;
     margin: 10px auto;
     width: 400px;
   }
+}
+
+.section-roulette {
+  margin: 50px 0;
+}
+
+.list-chosen{
+  background-color: gray;
+}
+
+.except-choose{
+  text-decoration: line-through;
 }

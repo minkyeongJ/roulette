@@ -17,15 +17,12 @@ const makeListHandle = () => {
   }
 
   list.addEventListener("click", () => {
-    console.log(list.className);
     if (list.className === "include-choose") {
       // 만들어진 list에 클릭 이벤트가 발생하면 줄 긋기
-      list.style.textDecoration = "line-through";
       list.classList.remove("include-choose");
       list.classList.add("except-choose");
     } else {
       // 만들어진 list에 클릭 이벤트가 발생하면 줄 제거
-      list.style.textDecoration = "";
       list.classList.remove("except-choose");
       list.classList.add("include-choose");
     }
@@ -50,5 +47,32 @@ $inputQuestion.addEventListener("keyup", () => {
 
 // <룰렛 돌리기>
 let $questionList = $showQuestionList.querySelectorAll("li");
-console.log($showQuestionList.querySelectorAll("li"));
-console.log($showQuestionList.innerText);
+let $buttonChooseQuestion = document.getElementById("button-choosequestion");
+
+$buttonChooseQuestion.addEventListener("click", () => {
+  if (document.querySelector(".list-chosen")) {
+    const finallyChosenList = document.querySelector(".list-chosen");
+    finallyChosenList.classList.remove("include-choose");
+    finallyChosenList.classList.add("except-choose");
+    finallyChosenList.classList.remove("list-chosen");
+  }
+
+  $questionList = $showQuestionList.querySelectorAll(".include-choose");
+  const questionLength = $questionList.length;
+  const turn = Math.floor(questionLength * (Math.random() * 5 + 1));
+  let questionNumber = 0;
+  for (let i = 0; i < turn; i++) {
+    if (questionNumber >= questionLength) {
+      questionNumber = 0;
+    }
+    if (questionNumber - 1 === -1) {
+      $questionList[questionLength - 1].classList.remove("list-chosen");
+      $questionList[questionNumber].classList.add("list-chosen");
+    } else {
+      $questionList[questionNumber - 1].classList.remove("list-chosen");
+      $questionList[questionNumber].classList.add("list-chosen");
+    }
+    questionNumber++;
+  }
+});
+// </룰렛 돌리기>
