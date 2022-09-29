@@ -55,6 +55,7 @@ $buttonChooseQuestion.addEventListener("click", () => {
     finallyChosenList.classList.remove("include-choose");
     finallyChosenList.classList.add("except-choose");
     finallyChosenList.classList.remove("list-chosen");
+    finallyChosenList.scrollIntoView();
   }
 
   $questionList = $showQuestionList.querySelectorAll(".include-choose");

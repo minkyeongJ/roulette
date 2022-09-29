@@ -12,3 +12,8 @@
 - [ ] 출력 버튼을 누르면 입력한 항목을 pdf로 출력한다.
 - [ ] 저장 버튼을 누르면 로컬 스토리지에 저장한다.
 - [ ] 저장된 리스트가 화면에 나타난다.
+
+# 참고자료
+## 선택된 html 요소로 화면 이동하기
+ - [자바스크립트를 사용하여 특정 엘리먼트로 화면을 이동시키는 방법은?](https://webisfree.com/2017-03-30/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-%ED%8A%B9%EC%A0%95-%EC%97%98%EB%A6%AC%EB%A8%BC%ED%8A%B8%EB%A1%9C-%ED%99%94%EB%A9%B4%EC%9D%84-%EC%9D%B4%EB%8F%99%EC%8B%9C%ED%82%A4%EB%8A%94-%EB%B0%A9%EB%B2%95%EC%9D%80)
+   - ```scrollIntoView()```

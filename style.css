@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Nanum+Gothic:wght@400;700;800&family=Roboto:wght@400;700&display=swap");
 .ir {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -7,12 +8,34 @@
   overflow: hidden;
 }
 
-#app {
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fbe9db;
+}
+body #app {
+  min-height: 100vh;
+  width: 80vw;
+  margin: 0 auto;
+  background-color: #fffcf7;
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .section-titie {
-  margin: 50px 0;
+  padding: 50px 0;
+}
+.section-titie .titie {
+  margin: 0;
+}
+.section-titie .titie img {
+  width: 150px;
 }
 
 main {
@@ -20,15 +43,25 @@ main {
   width: 50%;
 }
 
+.section-inputquestion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 .section-inputquestion label {
-  font-size: 18px;
+  font-size: 16px;
+  min-width: 40px;
 }
 .section-inputquestion input {
+  flex: 1;
   height: 23px;
-  width: 80%;
   font-size: 16px;
   border: none;
   border-bottom: 1px solid gray;
+  background-color: initial;
+}
+.section-inputquestion #button-addquestion {
+  min-width: 40px;
 }
 
 .section-showquestion #showquestion-list {
@@ -36,9 +69,16 @@ main {
   margin: 10px auto;
   width: 80%;
 }
+.section-showquestion ul > li {
+  max-width: 90%;
+  word-break: break-all;
+}
 
 .section-roulette {
-  margin: 50px 0;
+  margin-bottom: 50px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
 }
 
 .list-chosen {
@@ -56,4 +96,10 @@ main {
   text-align: left;
   font-size: 12px;
   color: gray;
+}
+
+@media (max-width: 760px) {
+  main {
+    width: 90%;
+  }
 }/*# sourceMappingURL=style.css.map */

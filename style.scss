@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Nanum+Gothic:wght@400;700;800&family=Roboto:wght@400;700&display=swap");
+
+// font-family: 'Gowun Batang', serif;
+// font-family: 'Nanum Gothic', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
 .ir {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -7,12 +13,33 @@
   overflow: hidden;
 }
 
-#app {
-  text-align: center;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  background-color: #fbe9db;
+  #app {
+    min-height: 100vh;
+    width: 80vw;
+    margin: 0 auto;
+    background-color: #fffcf7;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+  }
+}
 .section-titie {
-  margin: 50px 0;
+  padding: 50px 0;
+  .titie {
+    margin: 0;
+    img{
+      width: 150px;
+    }
+  }
 }
 
 main {
@@ -21,15 +48,23 @@ main {
 }
 
 .section-inputquestion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   label {
-    font-size: 18px;
+    font-size: 16px;
+    min-width: 40px;
   }
   input {
+    flex: 1;
     height: 23px;
-    width: 80%;
     font-size: 16px;
     border: none;
     border-bottom: 1px solid gray;
+    background-color: initial;
+  }
+  #button-addquestion {
+    min-width: 40px;
   }
 }
 
@@ -39,10 +74,16 @@ main {
     margin: 10px auto;
     width: 80%;
   }
+  ul > li {
+    max-width: 90%;
+    word-break: break-all;
+  }
 }
 
 .section-roulette {
-  margin: 50px 0;
+  margin-bottom: 50px;
+  position: sticky;
+  top: 20px;
 }
 
 .list-chosen {
@@ -59,5 +100,11 @@ main {
     text-align: left;
     font-size: 12px;
     color: gray;
+  }
+}
+
+@media (max-width: 760px) {
+  main {
+    width: 90%;
   }
 }
