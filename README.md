@@ -1,5 +1,6 @@
 # roulette
 면접 질문을 랜덤으로 뽑기 위한 룰렛입니다.
+배포링크: https://minkyeongj.github.io/roulette/
 
 # 사용방법
 ### 메인화면
