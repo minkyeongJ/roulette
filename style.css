@@ -21,7 +21,8 @@ body {
   overflow-x: hidden;
 }
 body #app {
-  min-height: 100vh;
+  position: relative;
+  min-height: 100%;
   width: 80vw;
   margin: 0 auto;
   background-color: #fffcf7;
@@ -42,6 +43,7 @@ body #app {
 main {
   margin: 0 auto;
   width: 50%;
+  padding-bottom: 80px;
 }
 
 .section-roulette {
@@ -195,34 +197,55 @@ main {
   color: gray;
 }
 
+footer {
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%);
+  display: grid;
+  place-items: center;
+}
+footer .github-logo {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url(./assets/github-logo.png);
+  background-size: cover;
+}
+footer .copyright {
+  font-size: 10px;
+  color: gray;
+}
+
 .section-figure img {
   width: 10vh;
   position: absolute;
 }
 .section-figure .img-1-circle {
   top: 10%;
-  left: 5px;
+  left: -15%;
 }
 .section-figure .img-2-fangreen {
   top: 20%;
-  right: -15px;
+  right: -15%;
 }
 .section-figure .img-3-ribbon {
   top: 80%;
-  right: 20px;
+  right: -10%;
   transform: rotate(-10deg);
 }
 .section-figure .img-4-vase {
   top: 70%;
-  left: -1px;
+  left: -12%;
 }
 .section-figure .img-5-starcandy {
   top: 65%;
-  left: 10px;
+  left: -8%;
 }
 .section-figure .img-6-fanskyblue {
   top: 90%;
-  right: -5px;
+  right: -15%;
 }
 
 @media (max-width: 800px) {
