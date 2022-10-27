@@ -1,3 +1,22 @@
+/*<인원 추가 및 순서 정하기> */
+let $participantsLists = document.getElementsByClassName("lists-participants");
+let $buttonAddParticipants = document.getElementById("button-add");
+
+/*인원 추가하기 */
+const addParticipants = () => {
+  let list = document.createElement("li");
+  let input = document.createElement("input");
+  input.placeholder = "홍길동";
+  list.appendChild(input);
+  $participantsLists[0].appendChild(list);
+};
+
+$buttonAddParticipants.addEventListener("click", () => {
+  console.log($participantsLists);
+  addParticipants();
+});
+/*</인원 추가 및 순서 정하기> */
+
 // <질문 입력 및 삭제 하기>
 let $inputQuestion = document.getElementById("input-question"); //질문 입력창
 let $buttonAddQuestion = document.getElementById("button-addquestion"); // 버튼
