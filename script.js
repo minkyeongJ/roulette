@@ -1,6 +1,7 @@
-/*<인원 추가 및 순서 정하기> */
+/*<참여 인원 관리 및 순서 정하기> */
 let $participantsLists = document.getElementsByClassName("lists-participants");
 let $buttonAddParticipants = document.getElementById("button-add");
+let $buttonDeleteParticipants = document.getElementById("button-delete");
 
 /*인원 추가하기 */
 const addParticipants = () => {
@@ -12,8 +13,18 @@ const addParticipants = () => {
 };
 
 $buttonAddParticipants.addEventListener("click", () => {
-  console.log($participantsLists);
   addParticipants();
+});
+
+/*인원 삭제하기 */
+const deleteParticipants = () => {
+  if ($participantsLists[0].childNodes.length > 5) {
+    $participantsLists[0].lastChild.remove();
+  }
+};
+
+$buttonDeleteParticipants.addEventListener("click", () => {
+  deleteParticipants();
 });
 /*</인원 추가 및 순서 정하기> */
 
