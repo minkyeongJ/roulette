@@ -3,6 +3,11 @@
 // font-family: 'Gowun Batang', serif;
 // font-family: 'Nanum Gothic', sans-serif;
 // font-family: 'Roboto', sans-serif;
+:root {
+  --gray-explain: gray;
+  --size-explain: 14px;
+  --orange-btn: #ff7f00;
+}
 
 .ir {
   position: absolute;
@@ -35,9 +40,9 @@ body {
   }
 }
 
-.section-titie {
+.section-title {
   padding: 50px 0;
-  .titie {
+  .title {
     margin: 0;
     img {
       width: 150px;
@@ -49,6 +54,49 @@ main {
   margin: 0 auto;
   width: 50%;
   padding-bottom: 80px;
+}
+
+.section-participants {
+  padding-bottom: 30px;
+  p {
+    color: var(--gray-explain);
+    font-size: var(--size-explain);
+  }
+  .lists-participants {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    li {
+      input {
+        width: 80px;
+      }
+    }
+  }
+  button{
+    border: none;
+    padding: 3px 5px;
+    border-radius: 10px;
+    color: white;
+  }
+  #button-add{
+    background-color: lightseagreen;
+  }
+  #button-delete{
+    background-color: lightcoral;
+  }
+  #button-shuffle{
+    background-color: var(--orange-btn);
+  }
+  #participants-order{
+    margin-top: 20px;
+    background-color: white;
+    border: 1px solid var(--gray-explain);
+    border-radius: 10px;
+    padding: 10px;
+
+  }
 }
 
 .section-roulette {
@@ -86,7 +134,7 @@ main {
 
     &:after {
       background-clip: padding-box;
-      background-color: #ff7f00;
+      background-color: var(--orange-btn);
       border: solid transparent;
       border-radius: 16px;
       border-width: 0 0 4px;
@@ -195,8 +243,9 @@ main {
   margin: 20px 0;
   p {
     text-align: left;
-    font-size: 14px;
-    color: gray;
+    font-size: var(--size-explain);
+    color: var(--gray-explain);
+    padding-bottom: 5px;
   }
 }
 
@@ -215,7 +264,7 @@ footer {
     background-image: url(./assets/github-logo.png);
     background-size: cover;
   }
-  .copyright{
+  .copyright {
     font-size: 10px;
     color: gray;
   }
@@ -262,5 +311,11 @@ footer {
       width: 8vh;
       position: absolute;
     }
+  }
+}
+
+@media (max-width: 440px){
+  #button-addquestion{
+    width: 100%;
   }
 }

@@ -7,7 +7,8 @@ let $buttonDeleteParticipants = document.getElementById("button-delete");
 const addParticipants = () => {
   let list = document.createElement("li");
   let input = document.createElement("input");
-  input.placeholder = "홍길동";
+  input.className = "participants-name";
+  input.placeholder = "참여자 이름";
   list.appendChild(input);
   $participantsLists[0].appendChild(list);
 };
@@ -26,6 +27,31 @@ const deleteParticipants = () => {
 $buttonDeleteParticipants.addEventListener("click", () => {
   deleteParticipants();
 });
+
+/*이름 랜덤으로 섞기 */
+let $buttonShuffle = document.getElementById("button-shuffle");
+
+const shuffle = (array) => array.sort(() => Math.random() - 0.5);
+
+const shuffleHandle = () => {
+  let $participantsNameArr = [];
+  let $participantsNameNodes = document.querySelectorAll(
+    "input.participants-name"
+    );
+    let $participantsOrder = document.getElementById("participants-order");
+    let participantsShuffleArr = [];
+  $participantsNameNodes.forEach((node) => {
+    $participantsNameArr.push(node.value);
+  });
+  participantsShuffleArr = shuffle($participantsNameArr);
+  $participantsOrder.innerText = participantsShuffleArr.join(' → ');
+}
+
+$buttonShuffle.addEventListener("click", () => {
+  shuffleHandle();
+  
+});
+
 /*</인원 추가 및 순서 정하기> */
 
 // <질문 입력 및 삭제 하기>

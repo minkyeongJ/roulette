@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Nanum+Gothic:wght@400;700;800&family=Roboto:wght@400;700&display=swap");
+:root {
+  --gray-explain: gray;
+  --size-explain: 14px;
+  --orange-btn: #ff7f00;
+}
+
 .ir {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -30,13 +36,13 @@ body #app {
   font-family: "Roboto", sans-serif;
 }
 
-.section-titie {
+.section-title {
   padding: 50px 0;
 }
-.section-titie .titie {
+.section-title .title {
   margin: 0;
 }
-.section-titie .titie img {
+.section-title .title img {
   width: 150px;
 }
 
@@ -44,6 +50,46 @@ main {
   margin: 0 auto;
   width: 50%;
   padding-bottom: 80px;
+}
+
+.section-participants {
+  padding-bottom: 30px;
+}
+.section-participants p {
+  color: var(--gray-explain);
+  font-size: var(--size-explain);
+}
+.section-participants .lists-participants {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+.section-participants .lists-participants li input {
+  width: 80px;
+}
+.section-participants button {
+  border: none;
+  padding: 3px 5px;
+  border-radius: 10px;
+  color: white;
+}
+.section-participants #button-add {
+  background-color: lightseagreen;
+}
+.section-participants #button-delete {
+  background-color: lightcoral;
+}
+.section-participants #button-shuffle {
+  background-color: var(--orange-btn);
+}
+.section-participants #participants-order {
+  margin-top: 20px;
+  background-color: white;
+  border: 1px solid var(--gray-explain);
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .section-roulette {
@@ -87,7 +133,7 @@ main {
 }
 .section-roulette #button-choosequestion:after {
   background-clip: padding-box;
-  background-color: #ff7f00;
+  background-color: var(--orange-btn);
   border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;
@@ -193,8 +239,9 @@ main {
 }
 .section-howtouse p {
   text-align: left;
-  font-size: 14px;
-  color: gray;
+  font-size: var(--size-explain);
+  color: var(--gray-explain);
+  padding-bottom: 5px;
 }
 
 footer {
@@ -255,5 +302,10 @@ footer .copyright {
   .section-figure img {
     width: 8vh;
     position: absolute;
+  }
+}
+@media (max-width: 440px) {
+  #button-addquestion {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

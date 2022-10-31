@@ -5,16 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>질문 룰렛</title>
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="app">
-      <header class="section-titie">
-        <h1 class="titie">
+      <header class="section-title">
+        <h1 class="title">
           <img src="./assets/title-dollyeo.png" alt="돌려" />
         </h1>
       </header>
       <main>
+        <section class="section-participants">
+          <p>* 참여자를 추가하고 발표 순서를 정하세요.</p>
+          <ul class="lists-participants participants">
+            <li class="participants-first">
+              <input class="participants-name" type="text" placeholder="참여자 이름" />
+            </li>
+            <li class="participants-second">
+              <input class="participants-name" type="text" placeholder="참여자 이름" />
+            </li>
+          </ul>
+          <button id="button-add">인원 추가</button>
+          <button id="button-delete">인원 삭제</button>
+          <button id="button-shuffle">순서 정하기</button>
+          <p id="participants-order">발표 순서는 어떻게 될까? 두근!</p>
+        </section>
         <div class="section-roulette">
           <button id="button-choosequestion">룰렛 시작</button>
         </div>
@@ -36,16 +52,23 @@
         </section>
       </main>
       <footer>
-        <a href="https://github.com/minkyeongJ/roulette" class="github-logo"></a>
+        <a
+          href="https://github.com/minkyeongJ/roulette"
+          class="github-logo"
+        ></a>
         <span class="copyright">ⓒ 2022 by minkyeongJ</span>
       </footer>
       <div class="section-figure">
         <img src="./assets/circle-blue.png" alt="" class="img-1-circle" />
-        <img src="./assets/fan-green.png" alt="" class="img-2-fangreen"/>
-        <img src="./assets/ribbon-pink.png" alt="" class="img-3-ribbon"/>
-        <img src="./assets/vase-pink.png" alt="" class="img-4-vase"/>
-        <img src="./assets/star-candy-yellow.png" alt="" class="img-5-starcandy"/>
-        <img src="./assets/fan-skyblue.png" alt="" class="img-6-fanskyblue"/>
+        <img src="./assets/fan-green.png" alt="" class="img-2-fangreen" />
+        <img src="./assets/ribbon-pink.png" alt="" class="img-3-ribbon" />
+        <img src="./assets/vase-pink.png" alt="" class="img-4-vase" />
+        <img
+          src="./assets/star-candy-yellow.png"
+          alt=""
+          class="img-5-starcandy"
+        />
+        <img src="./assets/fan-skyblue.png" alt="" class="img-6-fanskyblue" />
       </div>
     </div>
     <script src="script.js"></script>
