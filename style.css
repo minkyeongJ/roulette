@@ -71,9 +71,11 @@ main {
 }
 .section-participants button {
   border: none;
-  padding: 3px 5px;
+  padding: 5px 8px;
+  margin: 0 10px;
   border-radius: 10px;
   color: white;
+  font-weight: bold;
 }
 .section-participants #button-add {
   background-color: lightseagreen;
@@ -90,6 +92,7 @@ main {
   border: 1px solid var(--gray-explain);
   border-radius: 10px;
   padding: 10px;
+  color: black;
 }
 
 .section-roulette {
