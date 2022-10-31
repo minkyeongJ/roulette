@@ -55,6 +55,11 @@
 ![질문새로고침](https://user-images.githubusercontent.com/67677374/193419438-2bf89388-c70d-4377-a7ab-80d27c1f04ea.gif)
 
 ### 발표 순서 정하기
+참여자 추가 삭제 버튼으로 발표에 참여할 사람의 인원을 추가 삭제할 수 있습니다.
+![참여자 추가 삭제](https://user-images.githubusercontent.com/67677374/198960540-fc621fdc-0612-4ad2-87a2-174e0c872873.gif)
+
+순서정하기 버튼을 누르면 발표순서를 랜덤으로 설정하여 나타냅니다.
+![참여자 순서 정하기](https://user-images.githubusercontent.com/67677374/198960435-58561dde-05be-4de2-86d4-b9af78e7c75c.gif)
 
 # 요구사항
 
