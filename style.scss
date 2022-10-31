@@ -55,9 +55,25 @@ main {
   width: 50%;
   padding-bottom: 80px;
 }
-
+.wrap-participants {
+  position: relative;
+}
 .section-participants {
   padding-bottom: 30px;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px dashed var(--gray-explain);
+    left: 50%;
+    height: 1px;
+    width: 100%;
+    transform: translate(-50%);
+  }
+  &::before {
+    top: -20px;
+  }
+
   p {
     color: var(--gray-explain);
     font-size: var(--size-explain);
@@ -71,10 +87,11 @@ main {
     li {
       input {
         width: 80px;
+        text-align: center;
       }
     }
   }
-  button{
+  button {
     border: none;
     padding: 5px 8px;
     margin: 0 10px;
@@ -82,17 +99,17 @@ main {
     color: white;
     font-weight: bold;
   }
-  #button-add{
+  #button-add {
     background-color: lightseagreen;
   }
-  #button-delete{
+  #button-delete {
     background-color: lightcoral;
   }
-  #button-shuffle{
+  #button-shuffle {
     background-color: var(--orange-btn);
   }
-  #participants-order{
-    margin-top: 20px;
+  #participants-order {
+    margin: 20px;
     background-color: white;
     border: 1px solid var(--gray-explain);
     border-radius: 10px;
@@ -316,8 +333,8 @@ footer {
   }
 }
 
-@media (max-width: 440px){
-  #button-addquestion{
+@media (max-width: 440px) {
+  #button-addquestion {
     width: 100%;
   }
 }

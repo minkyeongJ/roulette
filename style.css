@@ -52,8 +52,24 @@ main {
   padding-bottom: 80px;
 }
 
+.wrap-participants {
+  position: relative;
+}
+
 .section-participants {
   padding-bottom: 30px;
+}
+.section-participants::before, .section-participants::after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px dashed var(--gray-explain);
+  left: 50%;
+  height: 1px;
+  width: 100%;
+  transform: translate(-50%);
+}
+.section-participants::before {
+  top: -20px;
 }
 .section-participants p {
   color: var(--gray-explain);
@@ -68,6 +84,7 @@ main {
 }
 .section-participants .lists-participants li input {
   width: 80px;
+  text-align: center;
 }
 .section-participants button {
   border: none;
@@ -87,7 +104,7 @@ main {
   background-color: var(--orange-btn);
 }
 .section-participants #participants-order {
-  margin-top: 20px;
+  margin: 20px;
   background-color: white;
   border: 1px solid var(--gray-explain);
   border-radius: 10px;
