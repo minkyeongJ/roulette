@@ -59,8 +59,7 @@ main {
 .section-participants {
   padding-bottom: 30px;
 }
-.section-participants::before,
-.section-participants::after {
+.section-participants::before, .section-participants::after {
   content: "";
   position: absolute;
   border-bottom: 1px dashed var(--gray-explain);
@@ -115,14 +114,13 @@ main {
 
 .section-roulette {
   margin-bottom: 50px;
-  position: -webkit-sticky;
   position: sticky;
   top: 20px;
 }
 .section-roulette #button-choosequestion {
   -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
+     -moz-appearance: button;
+          appearance: button;
   background-color: #ff0000;
   border: solid transparent;
   border-radius: 16px;
@@ -145,8 +143,7 @@ main {
   transform: translateZ(0);
   transition: filter 0.2s;
   -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+       user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
@@ -166,12 +163,10 @@ main {
   top: 0;
   z-index: -1;
 }
-.section-roulette #button-choosequestion:main,
-.section-roulette #button-choosequestion:focus {
+.section-roulette #button-choosequestion:main, .section-roulette #button-choosequestion:focus {
   -webkit-user-select: auto;
-  -moz-user-select: auto;
-  -ms-user-select: auto;
-  user-select: auto;
+     -moz-user-select: auto;
+          user-select: auto;
 }
 .section-roulette #button-choosequestion:hover:not(:disabled) {
   filter: brightness(1.1);
@@ -227,8 +222,7 @@ main {
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
   -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+       user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
@@ -332,4 +326,4 @@ footer .copyright {
   #button-addquestion {
     width: 100%;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
