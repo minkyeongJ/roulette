@@ -145,3 +145,32 @@ $buttonChooseQuestion.addEventListener("click", () => {
   }
 });
 // </룰렛 돌리기>
+
+//<pdf 인쇄하기>
+const { jsPDF } = window.jspdf;
+
+const getQuestionListPdf = () => {
+  const items = $showQuestionList.getElementsByTagName("li");
+
+  if (items.length) {
+    const itemsArr = [...items];
+    const doc = new jsPDF({
+      unit: "pt",
+      orientation: "p",
+      format: "a4",
+    });
+    itemsArr.forEach((item, i) => {
+      doc.text(15, 20 + i * 16, `${item.innerText}\n`);
+    });
+
+    doc.save("questionList.pdf");
+    return;
+  }
+  alert("질문을 입력해주세요.");
+};
+
+document.getElementById("button-pdfdownload").addEventListener("click", (e) => {
+  e.preventDefault();
+  getQuestionListPdf();
+});
+//</pdf 인쇄하기>
