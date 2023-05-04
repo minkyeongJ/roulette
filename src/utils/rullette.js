@@ -88,9 +88,9 @@ const makeListHandle = () => {
     $inputQuestion.value.split("\n").forEach((text) => {
       const list = document.createElement("li"); // html 'li' 태그 만들기
       list.innerText = text.trim(); // 각 줄의 내용을 할당하고, 양 옆 공백 제거
-      list.classList.add("include-choose");
-      $showQuestionList.appendChild(list); // 생성한 li 요소를 추가
-      addClickEventForList(list);
+      text && list.classList.add("include-choose");
+      text && $showQuestionList.appendChild(list); // 생성한 li 요소를 추가
+      text && addClickEventForList(list);
     });
     $inputQuestion.value = ""; // 할 일 입력창 초기화
   } else {
@@ -149,6 +149,24 @@ $buttonChooseQuestion.addEventListener("click", () => {
 // </룰렛 돌리기>
 
 //<pdf 인쇄하기>
+// 개행 처리 함수
+const getNewlineItem = (str, size) => {
+  let height = 0;
+
+  if (str.length > size) {
+    const arr = [];
+
+    for (let i = 0; i < str.length; i += size) {
+      arr.push(str.substring(i, i + size));
+      arr.push("\n");
+      height++;
+    }
+    return { text: arr.join(""), height: height };
+  }
+  return { text: str, height: height };
+};
+
+//pdf 출력 로직
 const NanumGothic = NANUM_GOTHIC_BASE64;
 const { jsPDF } = window.jspdf;
 
@@ -158,20 +176,25 @@ const getQuestionListPdf = () => {
   if (items.length) {
     const itemsArr = [...items];
     const doc = new jsPDF({
-      unit: "pt",
+      unit: "mm",
       orientation: "p",
       format: "a4",
     });
+
+    let startHeight = 0; //라인 별 시작 높이
 
     doc.addFileToVFS("nanumGothic.ttf", NanumGothic);
     doc.addFont("nanumGothic.ttf", "nanumGothic", "normal");
     doc.setFont("nanumGothic");
 
-    console.log(itemsArr);
-
     itemsArr.forEach((item, i) => {
-      const text = item.innerText.split("\n").join("");
-      doc.text(`${i + 1}. ${text}`, 15, 20 * i);
+      const newlineItem = getNewlineItem(item.innerText, 38);
+      doc.text(
+        `${i + 1}. ${newlineItem.text}`,
+        15,
+        20 + 10 * (i + startHeight)
+      );
+      startHeight += newlineItem.height / 2;
     });
 
     doc.save("questionList.pdf");
@@ -180,8 +203,7 @@ const getQuestionListPdf = () => {
   alert("질문을 입력해주세요.");
 };
 
-document.getElementById("button-pdfdownload").addEventListener("click", (e) => {
-  e.preventDefault();
-  getQuestionListPdf();
-});
+document
+  .getElementById("button-pdfdownload")
+  .addEventListener("click", getQuestionListPdf);
 //</pdf 인쇄하기>
