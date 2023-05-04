@@ -1,3 +1,5 @@
+import { NANUM_GOTHIC_BASE64 } from "../helper/font.js";
+
 /*<참여 인원 관리 및 순서 정하기> */
 let $participantsLists = document.getElementsByClassName("lists-participants");
 let $buttonAddParticipants = document.getElementById("button-add");
@@ -147,6 +149,7 @@ $buttonChooseQuestion.addEventListener("click", () => {
 // </룰렛 돌리기>
 
 //<pdf 인쇄하기>
+const NanumGothic = NANUM_GOTHIC_BASE64;
 const { jsPDF } = window.jspdf;
 
 const getQuestionListPdf = () => {
@@ -159,8 +162,16 @@ const getQuestionListPdf = () => {
       orientation: "p",
       format: "a4",
     });
+
+    doc.addFileToVFS("nanumGothic.ttf", NanumGothic);
+    doc.addFont("nanumGothic.ttf", "nanumGothic", "normal");
+    doc.setFont("nanumGothic");
+
+    console.log(itemsArr);
+
     itemsArr.forEach((item, i) => {
-      doc.text(15, 20 + i * 16, `${item.innerText}\n`);
+      const text = item.innerText.split("\n").join("");
+      doc.text(`${i + 1}. ${text}`, 15, 20 * i);
     });
 
     doc.save("questionList.pdf");
