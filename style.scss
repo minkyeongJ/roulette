@@ -245,8 +245,10 @@ main {
     text-align: left;
     margin: 10px auto;
     width: 80%;
+    list-style-type: disc;
   }
   ul > li {
+    padding: 5px 0;
     max-width: 90%;
     word-break: break-all;
   }
