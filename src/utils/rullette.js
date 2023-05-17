@@ -79,28 +79,31 @@ const addClickEventForList = (list) => {
 };
 
 const makeListHandle = () => {
-  // 버튼에 클릭 이벤트가 발생하면
-  if (!$inputQuestion.value)
+  const inputQuestionValue = $inputQuestion.value.trim(); // 입력된 값을 양 옆 공백 제거하여 변수에 할당
+
+  if (!inputQuestionValue) {
     // 할 일 입력창에 내용이 입력되지 않으면 alert 발생
     alert("내용을 입력해 주세요!");
-  else if ($inputQuestion.value.split("\n").length > 1) {
-    // 여러 줄이 입력되었을 때, 각 줄마다 li 요소를 생성하여 추가
-    $inputQuestion.value.split("\n").forEach((text) => {
-      const list = document.createElement("li"); // html 'li' 태그 만들기
-      list.innerText = text.trim(); // 각 줄의 내용을 할당하고, 양 옆 공백 제거
-      text && list.classList.add("include-choose");
-      text && $showQuestionList.appendChild(list); // 생성한 li 요소를 추가
-      text && addClickEventForList(list);
-    });
-    $inputQuestion.value = ""; // 할 일 입력창 초기화
-  } else {
-    const list = document.createElement("li"); // html 'li' 태그 만들기
-    list.innerText = $inputQuestion.value; // <li>입력된 할 일</li>
-    list.classList.add("include-choose");
-    $showQuestionList.appendChild(list); // 할 일 리스트창에 자식으로 붙이기
-    $inputQuestion.value = ""; // 할 일 입력창 초기화
-    addClickEventForList(list);
+    return; // 함수 실행 중단
   }
+
+  const inputLines = inputQuestionValue.split("\n"); // 입력된 값을 줄바꿈을 기준으로 분할하여 배열에 할당
+
+  inputLines.forEach((line) => {
+    const trimmedLine = line.trim(); // 각 줄의 내용을 양 옆 공백 제거하여 변수에 할당
+
+    if (!trimmedLine) {
+      return; // 빈 줄은 처리하지 않고 넘어감
+    }
+
+    const list = document.createElement("li"); // html 'li' 태그 만들기
+    list.innerText = trimmedLine; // 각 줄의 내용을 할당
+    list.classList.add("include-choose");
+    $showQuestionList.appendChild(list); // 생성한 li 요소를 추가
+    addClickEventForList(list);
+  });
+
+  $inputQuestion.value = ""; // 할 일 입력창 초기화
 };
 
 $buttonAddQuestion.addEventListener("click", () => {
