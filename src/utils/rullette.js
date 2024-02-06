@@ -148,7 +148,17 @@ $buttonChooseQuestion.addEventListener("click", () => {
     }
     questionNumber++;
   }
+
+  // 모든 문제가 except-choose일 때
+  let $questionListAll = $showQuestionList.querySelectorAll("li");
+  let $exceptQuestionList =
+    $showQuestionList.querySelectorAll(".except-choose");
+
+  if ($questionListAll.length === $exceptQuestionList.length) {
+    alert("축하합니다! 모든 질문을 마쳤습니다!");
+  }
 });
+
 // </룰렛 돌리기>
 
 //<전체 질문 삭제>
