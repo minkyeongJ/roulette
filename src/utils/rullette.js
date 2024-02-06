@@ -151,6 +151,15 @@ $buttonChooseQuestion.addEventListener("click", () => {
 });
 // </룰렛 돌리기>
 
+//<전체 질문 삭제>
+let $buttonReset = document.getElementById("button-reset");
+
+$buttonReset.addEventListener("click", (event) => {
+  event.preventDefault();
+  $showQuestionList.innerHTML = "";
+});
+//</전체 질문 삭제>
+
 //<pdf 인쇄하기>
 // 개행 처리 함수
 const getNewlineItem = (str, size) => {
