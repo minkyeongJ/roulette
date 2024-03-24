@@ -192,7 +192,7 @@ main {
   height: 23px;
   font-size: 16px;
   border: none;
-  border-bottom: 1px solid var(--gray-explain);
+  border-bottom: 1px solid gray;
   background-color: initial;
 }
 .section-inputquestion #button-addquestion {
@@ -282,7 +282,7 @@ footer .github-logo {
 }
 footer .copyright {
   font-size: 10px;
-  color: gray;
+  color: var(--gray-explain);
 }
 
 .section-figure img {

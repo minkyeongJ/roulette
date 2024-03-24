@@ -196,7 +196,7 @@ main {
     height: 23px;
     font-size: 16px;
     border: none;
-    border-bottom: 1px solid var(--gray-explain);
+    border-bottom: 1px solid gray;
     background-color: initial;
   }
   #button-addquestion {
@@ -289,7 +289,7 @@ footer {
   }
   .copyright {
     font-size: 10px;
-    color: gray;
+    color: var(--gray-explain);
   }
 }
 
