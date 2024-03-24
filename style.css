@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Nanum+Gothic:wght@400;700;800&family=Roboto:wght@400;700&display=swap");
 :root {
-  --gray-explain: gray;
+  --gray-explain: #4d4d4d;
   --size-explain: 14px;
   --orange-btn: #ff7f00;
 }
@@ -95,13 +95,13 @@ main {
   font-weight: bold;
 }
 .section-participants #button-add {
-  background-color: lightseagreen;
+  background-color: #138179;
 }
 .section-participants #button-delete {
-  background-color: lightcoral;
+  background-color: #df2f2f;
 }
 .section-participants #button-shuffle {
-  background-color: var(--orange-btn);
+  background-color: #b85a00;
 }
 .section-participants #participants-order {
   margin: 20px;
@@ -192,7 +192,7 @@ main {
   height: 23px;
   font-size: 16px;
   border: none;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid var(--gray-explain);
   background-color: initial;
 }
 .section-inputquestion #button-addquestion {

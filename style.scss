@@ -4,7 +4,7 @@
 // font-family: 'Nanum Gothic', sans-serif;
 // font-family: 'Roboto', sans-serif;
 :root {
-  --gray-explain: gray;
+  --gray-explain: #4d4d4d;
   --size-explain: 14px;
   --orange-btn: #ff7f00;
 }
@@ -100,13 +100,13 @@ main {
     font-weight: bold;
   }
   #button-add {
-    background-color: lightseagreen;
+    background-color: #138179;
   }
   #button-delete {
-    background-color: lightcoral;
+    background-color: #df2f2f;
   }
   #button-shuffle {
-    background-color: var(--orange-btn);
+    background-color: #b85a00;
   }
   #participants-order {
     margin: 20px;
@@ -196,7 +196,7 @@ main {
     height: 23px;
     font-size: 16px;
     border: none;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid var(--gray-explain);
     background-color: initial;
   }
   #button-addquestion {
